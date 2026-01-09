@@ -10,13 +10,6 @@ c = db.cursor()
 def setup():
 
  role=''
-# try:
-# c.execute('CREATE DATABASE YATRA')
-# db.commit()
-# except:
-# print('Using existing database...')
-# c.execute('USE YATRA')
-# db.commit()
  try:
   c.execute('CREATE TABLE ADM_PLANE (FCODE INT(3) PRIMARY KEY, COMPANY CHAR(15), TYPE CHAR(10) NOT NULL, STARTDEST CHAR(15) NOT NULL, TIME INT(4) NOT NULL, GATENO CHAR(3) UNIQUE, STATUS CHAR(10), BASEPRICE FLOAT(10,2), PILOT CHAR(15) NOT NULL, PASSENGERS INT(2) NOT NULL, RUNWAY INT(2) UNIQUE)')
   db.commit()
